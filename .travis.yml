@@ -11,10 +11,10 @@ script:
   - docker run -e CI=true dockersamvi/react-test npm test 
 
 after_success:
-  - docker build -t dockersamvi/multi-client ./client
-  - docker build -t dockersamvi/multi-nginx ./nginx
-  - docker build -t dockersamvi/multi-server ./server
-  - docker build -t dockersamvi/multi-worker ./worker
+  - docker build -t samvidocker/multi-client ./client
+  - docker build -t samvidocker/multi-nginx ./nginx
+  - docker build -t samvidocker/multi-server ./server
+  - docker build -t samvidocker/multi-worker ./worker
 
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
