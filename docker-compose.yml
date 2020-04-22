@@ -28,10 +28,10 @@ services:
     environment:
       - REDIS_HOST=redis
       - REDIS_PORT=6379
-      - PGUSER=postgress
-      - PGHOST=postgress
-      - PGDATABASE=postgress
-      - PGPASSWORD=postgress_password
+      - PGUSER=postgres
+      - PGHOST=postgres
+      - PGDATABASE=postgres
+      - PGPASSWORD=postgres_password
       - PGPORT=5432
   client:
     stdin_open: true
@@ -41,7 +41,7 @@ services:
     volumes:
       - /app/node_modules
       - ./client:/app
-  woker:
+  worker:
     environment:
       - REDIS_HOST=redis
       - REDIS_PORT=6379
